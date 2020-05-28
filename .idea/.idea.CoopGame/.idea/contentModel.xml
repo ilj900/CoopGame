@@ -600,6 +600,8 @@
             <e p="LiveLinkMessageBusSource.h" t="Include" />
             <e p="LiveLinkMessageBusSourceFactory.cpp" t="Include" />
             <e p="LiveLinkMessageBusSourceFactory.h" t="Include" />
+            <e p="LiveLinkMessageBusSourceSettings.cpp" t="Include" />
+            <e p="LiveLinkMessageBusSourceSettings.h" t="Include" />
             <e p="LiveLinkModule.cpp" t="Include" />
             <e p="LiveLinkModule.h" t="Include" />
             <e p="LiveLinkMotionController.h" t="Include" />
@@ -7822,6 +7824,7 @@
             <e p="NiagaraRendererLights" t="Include" />
             <e p="NiagaraRendererLights.cpp" t="Include" />
             <e p="NiagaraRendererMeshes.cpp" t="Include" />
+            <e p="NiagaraRendererProperties.cpp" t="Include" />
             <e p="NiagaraRendererRibbons.cpp" t="Include" />
             <e p="NiagaraRendererSprites.cpp" t="Include" />
             <e p="NiagaraRibbonRendererProperties.cpp" t="Include" />
@@ -7839,6 +7842,7 @@
             <e p="NiagaraSystemSimulation.cpp" t="Include" />
             <e p="NiagaraTypes.cpp" t="Include" />
             <e p="NiagaraUserRedirectionParameterStore.cpp" t="Include" />
+            <e p="NiagaraVariant.cpp" t="Include" />
             <e p="NiagaraWorldManager.cpp" t="Include" />
           </e>
           <e p="Public" t="Include">
@@ -7889,6 +7893,7 @@
             <e p="NiagaraSystemSimulation.h" t="Include" />
             <e p="NiagaraTypes.h" t="Include" />
             <e p="NiagaraUserRedirectionParameterStore.h" t="Include" />
+            <e p="NiagaraVariant.h" t="Include" />
             <e p="NiagaraWorldManager.h" t="Include" />
           </e>
         </e>
@@ -8069,6 +8074,7 @@
             <e p="SNiagaraNewAssetDialog.cpp" t="Include" />
             <e p="SNiagaraNewAssetDialog.h" t="Include" />
             <e p="SNiagaraParameterEditor.cpp" t="Include" />
+            <e p="SNiagaraParameterName.cpp" t="Include" />
             <e p="Tests" t="Include">
               <e p="NiagaraEditorTestUtilities.cpp" t="Include" />
               <e p="NiagaraEditorTestUtilities.h" t="Include" />
@@ -8330,6 +8336,7 @@
               <e p="SItemSelector.h" t="Include" />
               <e p="SNiagaraLibraryOnlyToggleHeader.h" t="Include" />
               <e p="SNiagaraParameterMapView.h" t="Include" />
+              <e p="SNiagaraParameterName.h" t="Include" />
               <e p="SNiagaraParameterPanel.h" t="Include" />
               <e p="SNiagaraScriptGraph.h" t="Include" />
               <e p="SNiagaraSelectedObjectsDetails.h" t="Include" />
@@ -11318,7 +11325,6 @@
             <e p="MoviePipelineQueueSubsystem.cpp" t="Include" />
             <e p="MovieRenderPipelineEditorModule.cpp" t="Include" />
             <e p="MovieRenderPipelineEditorModule.h" t="Include" />
-            <e p="MovieRenderPipelineEditorTest.cpp" t="Include" />
             <e p="MovieRenderPipelineSettings.cpp" t="Include" />
             <e p="MovieRenderPipelineStyle.cpp" t="Include" />
             <e p="MovieRenderPipelineStyle.h" t="Include" />
@@ -14228,6 +14234,39 @@
           </e>
           <e p="Public" t="Include">
             <e p="GoogleCloudMessaging.h" t="Include" />
+          </e>
+        </e>
+      </e>
+    </e>
+    <e p="C:\Program Files\Epic Games\UE_4.25\Engine\Plugins\Runtime\GooglePAD" t="Include">
+      <e p="GooglePAD.uplugin" t="Include" />
+      <e p="Resources" t="Include">
+        <e p="Icon128.png" t="Include" />
+      </e>
+      <e p="Source" t="Include">
+        <e p="GooglePAD" t="Include">
+          <e p="Classes" t="Include">
+            <e p="GooglePADFunctionLibrary.h" t="Include" />
+          </e>
+          <e p="GooglePAD.Build.cs" t="Include" />
+          <e p="GooglePAD_APL.xml" t="Include" />
+          <e p="Private" t="Include">
+            <e p="GooglePAD.cpp" t="Include" />
+            <e p="GooglePADFunctionLibrary.cpp" t="Include" />
+          </e>
+          <e p="Public" t="Include">
+            <e p="GooglePAD.h" t="Include" />
+          </e>
+        </e>
+        <e p="GooglePADEditor" t="Include">
+          <e p="GooglePADEditor.Build.cs" t="Include" />
+          <e p="Private" t="Include">
+            <e p="GooglePADModule.cpp" t="Include" />
+            <e p="GooglePADRuntimeSettings.cpp" t="Include" />
+          </e>
+          <e p="Public" t="Include">
+            <e p="GooglePADEditor.h" t="Include" />
+            <e p="GooglePADRuntimeSettings.h" t="Include" />
           </e>
         </e>
       </e>
@@ -19329,6 +19368,7 @@
         <e p="HairStrandsMeshProjectionHairDebug.usf" t="Include" />
         <e p="HairStrandsMeshProjectionMeshDebug.usf" t="Include" />
         <e p="HairStrandsMeshUpdate.usf" t="Include" />
+        <e p="HairStrandsRaytracing.ush" t="Include" />
         <e p="HairStrandsRaytracingGeometry.usf" t="Include" />
         <e p="HairStrandsSamplesInit.usf" t="Include" />
         <e p="HairStrandsSamplesUpdate.usf" t="Include" />
@@ -19738,6 +19778,9 @@
       <e p="VelocityCommon.ush" t="Include" />
       <e p="VelocityShader.usf" t="Include" />
       <e p="VertexFactoryCommon.ush" t="Include" />
+      <e p="ViewMode" t="Include">
+        <e p="LODColorationPixelShader.usf" t="Include" />
+      </e>
       <e p="VirtualTextureCommon.ush" t="Include" />
       <e p="VirtualTextureCompress.usf" t="Include" />
       <e p="VirtualTextureMaterial.usf" t="Include" />
@@ -30220,6 +30263,7 @@
               <e p="AndroidInputInterface.cpp" t="Include" />
               <e p="AndroidJavaMediaPlayer.cpp" t="Include" />
               <e p="AndroidPlatformApplicationMisc.cpp" t="Include" />
+              <e p="AndroidPlatformFramePacer.cpp" t="Include" />
               <e p="AndroidPlatformSurvey.cpp" t="Include" />
               <e p="AndroidWindow.cpp" t="Include" />
             </e>
@@ -30230,10 +30274,14 @@
               </e>
               <e p="GenericApplication.cpp" t="Include" />
               <e p="GenericPlatformApplicationMisc.cpp" t="Include" />
+              <e p="GenericPlatformFramePacer.cpp" t="Include" />
               <e p="GenericPlatformSoftwareCursor.cpp" t="Include" />
               <e p="GenericPlatformSplash.cpp" t="Include" />
               <e p="GenericPlatformSurvey.cpp" t="Include" />
               <e p="GenericWindow.cpp" t="Include" />
+            </e>
+            <e p="HAL" t="Include">
+              <e p="PlatformFramePacer.cpp" t="Include" />
             </e>
             <e p="HoloLens" t="Include">
               <e p="HoloLensApplication.cpp" t="Include" />
@@ -30337,6 +30385,7 @@
               <e p="AndroidInputInterface.h" t="Include" />
               <e p="AndroidJavaMediaPlayer.h" t="Include" />
               <e p="AndroidPlatformApplicationMisc.h" t="Include" />
+              <e p="AndroidPlatformFramePacer.h" t="Include" />
               <e p="AndroidPlatformSplash.h" t="Include" />
               <e p="AndroidPlatformSurvey.h" t="Include" />
               <e p="AndroidWindow.h" t="Include" />
@@ -30519,10 +30568,13 @@
           <e p="AudioCaptureCore.Build.cs" t="Include" />
           <e p="Private" t="Include">
             <e p="AudioCaptureCore.cpp" t="Include" />
+            <e p="AudioCaptureCoreModule.cpp" t="Include" />
             <e p="AudioCaptureInternal.h" t="Include" />
           </e>
           <e p="Public" t="Include">
             <e p="AudioCaptureCore.h" t="Include" />
+            <e p="AudioCaptureCoreLog.h" t="Include" />
+            <e p="AudioCaptureCoreModule.h" t="Include" />
             <e p="AudioCaptureDeviceInterface.h" t="Include" />
           </e>
         </e>
@@ -35952,6 +36004,7 @@
                 <e p="PBDRigidsEvolution.cpp" t="Include" />
                 <e p="PBDRigidsEvolutionGBF.cpp" t="Include" />
                 <e p="PBDRigidSpringConstraints.cpp" t="Include" />
+                <e p="PerParticleEtherDrag.cpp" t="Include" />
                 <e p="PhysicalMaterials.cpp" t="Include" />
                 <e p="RigidParticles.cpp" t="Include" />
                 <e p="SegmentMesh.cpp" t="Include" />
@@ -39080,6 +39133,8 @@
               <e p="HttpRequestHandlerRegistrar.h" t="Include" />
               <e p="HttpRouter.cpp" t="Include" />
               <e p="HttpRouter.h" t="Include" />
+              <e p="HttpServerConfig.cpp" t="Include" />
+              <e p="HttpServerConfig.h" t="Include" />
               <e p="HttpServerConstantsPrivate.h" t="Include" />
               <e p="HttpServerModule.cpp" t="Include" />
               <e p="HttpServerResponse.cpp" t="Include" />
@@ -39327,6 +39382,8 @@
               <e p="AndroidEGL.h" t="Include" />
               <e p="AndroidOpenGL.cpp" t="Include" />
               <e p="AndroidOpenGL.h" t="Include" />
+              <e p="AndroidOpenGLFramePacer.cpp" t="Include" />
+              <e p="AndroidOpenGLFramePacer.h" t="Include" />
               <e p="AndroidOpenGLPrivate.h" t="Include" />
             </e>
             <e p="Linux" t="Include">
@@ -40268,6 +40325,10 @@
             <e p="TranslucentRendering.h" t="Include" />
             <e p="VelocityRendering.cpp" t="Include" />
             <e p="VelocityRendering.h" t="Include" />
+            <e p="ViewMode" t="Include">
+              <e p="LODColorationRendering.cpp" t="Include" />
+              <e p="LODColorationRendering.h" t="Include" />
+            </e>
             <e p="VisualizeTexturePresent.cpp" t="Include" />
             <e p="VisualizeTexturePresent.h" t="Include" />
             <e p="VisualizeVolumetricLightmap.cpp" t="Include" />
@@ -42540,6 +42601,11 @@
           <e p="GoogleARCoreSDK.build.cs" t="Include" />
           <e p="GoogleARCoreSDK.tps" t="Include" />
         </e>
+        <e p="GoogleGameSDK" t="Include">
+          <e p="GoogleGameSDK.Build.cs" t="Include" />
+          <e p="GoogleGameSDK.tps" t="Include" />
+          <e p="GoogleGameSDK_APL.xml" t="Include" />
+        </e>
         <e p="GoogleInstantPreview" t="Include">
           <e p="GoogleInstantPreview.Build.cs" t="Include" />
           <e p="GoogleInstantPreview.tps" t="Include" />
@@ -42674,8 +42740,6 @@
         <e p="NVIDIA" t="Include">
           <e p="NVaftermath" t="Include">
             <e p="Aftermath.tps" t="Include" />
-            <e p="Defines.h" t="Include" />
-            <e p="GFSDK_Aftermath.h" t="Include" />
             <e p="NVaftermath.Build.cs" t="Include" />
           </e>
           <e p="nvapi" t="Include">
@@ -42911,6 +42975,7 @@
         <e p="DefaultEditor.ini" t="Include" />
         <e p="DefaultEngine.ini" t="Include" />
         <e p="DefaultGame.ini" t="Include" />
+        <e p="DefaultInput.ini" t="Include" />
       </e>
       <e p="CoopGame.sln" t="IncludeFlat" />
       <e p="CoopGame.uproject" t="Include" />
@@ -42922,6 +42987,280 @@
         <e p="UE4.vcxproj" t="IncludeRecursive" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
+      <e p="Plugins" t="Include">
+        <e p="Developer" t="Include">
+          <e p="RiderLink" t="Include">
+            <e p="Resources" t="Include">
+              <e p="Icon128.png" t="Include" />
+            </e>
+            <e p="RiderLink.uplugin" t="Include" />
+            <e p="Source" t="Include">
+              <e p="RD" t="Include">
+                <e p="include" t="Include">
+                  <e p="rd_core_cpp" t="Include">
+                    <e p="Lifetime" t="Include">
+                      <e p="Lifetime.h" t="Include" />
+                      <e p="LifetimeDefinition.h" t="Include" />
+                      <e p="LifetimeImpl.h" t="Include" />
+                      <e p="SequentialLifetimes.h" t="Include" />
+                    </e>
+                    <e p="logger" t="Include">
+                      <e p="Logger.h" t="Include" />
+                    </e>
+                    <e p="PCH.h" t="Include" />
+                    <e p="reactive" t="Include">
+                      <e p="base" t="Include">
+                        <e p="IProperty.h" t="Include" />
+                        <e p="IPropertyBase.h" t="Include" />
+                        <e p="IViewableList.h" t="Include" />
+                        <e p="IViewableMap.h" t="Include" />
+                        <e p="IViewableSet.h" t="Include" />
+                        <e p="viewable_collections.h" t="Include" />
+                      </e>
+                      <e p="interfaces.h" t="Include" />
+                      <e p="Property.h" t="Include" />
+                      <e p="SignalX.h" t="Include" />
+                      <e p="ViewableList.h" t="Include" />
+                      <e p="ViewableMap.h" t="Include" />
+                      <e p="ViewableSet.h" t="Include" />
+                    </e>
+                    <e p="std" t="Include">
+                      <e p="allocator.h" t="Include" />
+                      <e p="FileSystem.h" t="Include" />
+                      <e p="hash.h" t="Include" />
+                      <e p="List.h" t="Include" />
+                      <e p="to_string.h" t="Include" />
+                      <e p="unordered_map.h" t="Include" />
+                      <e p="unordered_set.h" t="Include" />
+                    </e>
+                    <e p="Types" t="Include">
+                      <e p="DateTime.h" t="Include" />
+                      <e p="Void.h" t="Include" />
+                      <e p="wrapper.h" t="Include" />
+                    </e>
+                    <e p="Util" t="Include">
+                      <e p="core_traits.h" t="Include" />
+                      <e p="core_util.h" t="Include" />
+                      <e p="enum.h" t="Include" />
+                      <e p="erase_if.h" t="Include" />
+                      <e p="gen_util.h" t="Include" />
+                      <e p="overloaded.h" t="Include" />
+                      <e p="shared_function.h" t="Include" />
+                    </e>
+                  </e>
+                  <e p="rd_framework_cpp" t="Include">
+                    <e p="base" t="Include">
+                      <e p="IProtocol.h" t="Include" />
+                      <e p="IRdBindable.h" t="Include" />
+                      <e p="IRdDynamic.h" t="Include" />
+                      <e p="IRdReactive.h" t="Include" />
+                      <e p="IRdWireable.h" t="Include" />
+                      <e p="ISerializersOwner.h" t="Include" />
+                      <e p="IUnknownInstance.h" t="Include" />
+                      <e p="IWire.h" t="Include" />
+                      <e p="RdBindableBase.h" t="Include" />
+                      <e p="RdPropertyBase.h" t="Include" />
+                      <e p="RdReactiveBase.h" t="Include" />
+                      <e p="WireBase.h" t="Include" />
+                    </e>
+                    <e p="ext" t="Include">
+                      <e p="ExtWire.h" t="Include" />
+                      <e p="RdExtBase.h" t="Include" />
+                    </e>
+                    <e p="Impl" t="Include">
+                      <e p="RdList.h" t="Include" />
+                      <e p="RdMap.h" t="Include" />
+                      <e p="RdProperty.h" t="Include" />
+                      <e p="RdSet.h" t="Include" />
+                      <e p="RdSignal.h" t="Include" />
+                      <e p="RName.h" t="Include" />
+                    </e>
+                    <e p="intern" t="Include">
+                      <e p="InternRoot.h" t="Include" />
+                      <e p="InternScheduler.h" t="Include" />
+                    </e>
+                    <e p="PCH.h" t="Include" />
+                    <e p="Protocol" t="Include">
+                      <e p="Buffer.h" t="Include" />
+                      <e p="Identities.h" t="Include" />
+                      <e p="MessageBroker.h" t="Include" />
+                      <e p="Protocol.h" t="Include" />
+                      <e p="RdId.h" t="Include" />
+                    </e>
+                    <e p="Scheduler" t="Include">
+                      <e p="base" t="Include">
+                        <e p="IScheduler.h" t="Include" />
+                        <e p="SingleThreadSchedulerBase.h" t="Include" />
+                      </e>
+                      <e p="SimpleScheduler.h" t="Include" />
+                      <e p="SingleThreadScheduler.h" t="Include" />
+                      <e p="SynchronousScheduler.h" t="Include" />
+                    </e>
+                    <e p="Serialization" t="Include">
+                      <e p="AbstractPolymorphic.h" t="Include" />
+                      <e p="ArraySerializer.h" t="Include" />
+                      <e p="DefaultAbstractDeclaration.h" t="Include" />
+                      <e p="InternedAnySerializer.h" t="Include" />
+                      <e p="InternedSerializer.h" t="Include" />
+                      <e p="ISerializable.h" t="Include" />
+                      <e p="NullableSerializer.h" t="Include" />
+                      <e p="Polymorphic.h" t="Include" />
+                      <e p="RdAny.h" t="Include" />
+                      <e p="SerializationCtx.h" t="Include" />
+                      <e p="Serializers.h" t="Include" />
+                    </e>
+                    <e p="task" t="Include">
+                      <e p="RdCall.h" t="Include" />
+                      <e p="RdEndpoint.h" t="Include" />
+                      <e p="RdSymmetricCall.h" t="Include" />
+                      <e p="RdTask.h" t="Include" />
+                      <e p="RdTaskImpl.h" t="Include" />
+                      <e p="RdTaskResult.h" t="Include" />
+                      <e p="WiredRdTask.h" t="Include" />
+                      <e p="WiredRdTaskImpl.h" t="Include" />
+                    </e>
+                    <e p="Util" t="Include">
+                      <e p="framework_traits.h" t="Include" />
+                      <e p="guards.h" t="Include" />
+                      <e p="hashing.h" t="Include" />
+                    </e>
+                    <e p="wire" t="Include">
+                      <e p="ByteBufferAsyncProcessor.h" t="Include" />
+                      <e p="PkgInputStream.h" t="Include" />
+                      <e p="PumpScheduler.h" t="Include" />
+                      <e p="SocketWire.h" t="Include" />
+                      <e p="WireUtil.h" t="Include" />
+                    </e>
+                  </e>
+                  <e p="ThirdParty" t="Include">
+                    <e p="clsocket" t="Include">
+                      <e p="src" t="Include">
+                        <e p="ActiveSocket.h" t="Include" />
+                        <e p="Host.h" t="Include" />
+                        <e p="PassiveSocket.h" t="Include" />
+                        <e p="SimpleSocket.h" t="Include" />
+                        <e p="StatTimer.h" t="Include" />
+                      </e>
+                    </e>
+                    <e p="mpark" t="Include">
+                      <e p="config.hpp" t="Include" />
+                      <e p="in_place.hpp" t="Include" />
+                      <e p="lib.hpp" t="Include" />
+                      <e p="variant.hpp" t="Include" />
+                    </e>
+                    <e p="nonstd" t="Include">
+                      <e p="string_view.hpp" t="Include" />
+                    </e>
+                    <e p="optional" t="Include">
+                      <e p="tl" t="Include">
+                        <e p="optional.hpp" t="Include" />
+                      </e>
+                    </e>
+                    <e p="thirdparty.hpp" t="Include" />
+                    <e p="tsl" t="Include">
+                      <e p="ordered_hash.h" t="Include" />
+                      <e p="ordered_map.h" t="Include" />
+                      <e p="ordered_set.h" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="libs" t="Include">
+                  <e p="Win" t="Include">
+                    <e p="x64" t="Include">
+                      <e p="Debug" t="Include">
+                        <e p="clsocket.lib" t="Include" />
+                        <e p="rd_core_cpp.lib" t="Include" />
+                        <e p="rd_framework_cpp.lib" t="Include" />
+                      </e>
+                      <e p="Release" t="Include">
+                        <e p="clsocket.lib" t="Include" />
+                        <e p="rd_core_cpp.lib" t="Include" />
+                        <e p="rd_framework_cpp.lib" t="Include" />
+                      </e>
+                    </e>
+                  </e>
+                </e>
+                <e p="RD.Build.cs" t="Include" />
+              </e>
+              <e p="RiderLink" t="Include">
+                <e p="Private" t="Include">
+                  <e p="BlueprintProvider.cpp" t="Include" />
+                  <e p="BlueprintProvider.h" t="Include" />
+                  <e p="ProtocolFactory.cpp" t="Include" />
+                  <e p="ProtocolFactory.h" t="Include" />
+                  <e p="RdConnection.cpp" t="Include" />
+                  <e p="RdEditorProtocol" t="Include">
+                    <e p="CMakeLists.txt" t="Include" />
+                    <e p="instantiations.cpp" t="Include" />
+                    <e p="instantiations.h" t="Include" />
+                    <e p="pch_RdEditorRoot.cpp" t="Include" />
+                    <e p="pch_RdEditorRoot.h" t="Include" />
+                    <e p="pch_UE4Library.cpp" t="Include" />
+                    <e p="pch_UE4Library.h" t="Include" />
+                    <e p="RdEditorModel" t="Include">
+                      <e p="RdEditorModel.cpp" t="Include" />
+                      <e p="RdEditorModel.h" t="Include" />
+                    </e>
+                    <e p="RdEditorRoot" t="Include">
+                      <e p="RdEditorRoot.cpp" t="Include" />
+                      <e p="RdEditorRoot.h" t="Include" />
+                    </e>
+                    <e p="UE4Library" t="Include">
+                      <e p="BlueprintFunction.cpp" t="Include" />
+                      <e p="BlueprintFunction.h" t="Include" />
+                      <e p="BlueprintHighlighter.cpp" t="Include" />
+                      <e p="BlueprintHighlighter.h" t="Include" />
+                      <e p="BlueprintReference.cpp" t="Include" />
+                      <e p="BlueprintReference.h" t="Include" />
+                      <e p="EmptyScriptCallStack.cpp" t="Include" />
+                      <e p="EmptyScriptCallStack.h" t="Include" />
+                      <e p="IScriptCallStack.cpp" t="Include" />
+                      <e p="IScriptCallStack.h" t="Include" />
+                      <e p="IScriptCallStack_Unknown.cpp" t="Include" />
+                      <e p="IScriptCallStack_Unknown.h" t="Include" />
+                      <e p="IScriptMsg.cpp" t="Include" />
+                      <e p="IScriptMsg.h" t="Include" />
+                      <e p="IScriptMsg_Unknown.cpp" t="Include" />
+                      <e p="IScriptMsg_Unknown.h" t="Include" />
+                      <e p="LogMessageInfo.cpp" t="Include" />
+                      <e p="LogMessageInfo.h" t="Include" />
+                      <e p="ScriptCallStack.cpp" t="Include" />
+                      <e p="ScriptCallStack.h" t="Include" />
+                      <e p="ScriptCallStackFrame.cpp" t="Include" />
+                      <e p="ScriptCallStackFrame.h" t="Include" />
+                      <e p="ScriptMsgCallStack.cpp" t="Include" />
+                      <e p="ScriptMsgCallStack.h" t="Include" />
+                      <e p="ScriptMsgException.cpp" t="Include" />
+                      <e p="ScriptMsgException.h" t="Include" />
+                      <e p="StringRange.cpp" t="Include" />
+                      <e p="StringRange.h" t="Include" />
+                      <e p="UClass.cpp" t="Include" />
+                      <e p="UClass.h" t="Include" />
+                      <e p="UE4Library.cpp" t="Include" />
+                      <e p="UE4Library.h" t="Include" />
+                      <e p="UnableToDisplayScriptCallStack.cpp" t="Include" />
+                      <e p="UnableToDisplayScriptCallStack.h" t="Include" />
+                      <e p="UnrealLogEvent.cpp" t="Include" />
+                      <e p="UnrealLogEvent.h" t="Include" />
+                    </e>
+                  </e>
+                  <e p="RdSingleThreadScheduler.hpp" t="Include" />
+                  <e p="RiderLink.cpp" t="Include" />
+                  <e p="RiderOutputDevice.cpp" t="Include" />
+                  <e p="UE4TypesMarshallers.cpp" t="Include" />
+                </e>
+                <e p="Public" t="Include">
+                  <e p="RdConnection.hpp" t="Include" />
+                  <e p="RiderLink.h" t="Include" />
+                  <e p="RiderOutputDevice.h" t="Include" />
+                  <e p="UE4TypesMarshallers.h" t="Include" />
+                </e>
+                <e p="RiderLink.Build.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="Source" t="Include">
         <e p="CoopGame" t="Include">
           <e p="CoopGame.Build.cs" t="Include" />
@@ -42931,9 +43270,11 @@
           <e p="CoopGameGameModeBase.h" t="Include" />
           <e p="Private" t="Include">
             <e p="SCharacter.cpp" t="Include" />
+            <e p="SWeapon.cpp" t="Include" />
           </e>
           <e p="Public" t="Include">
             <e p="SCharacter.h" t="Include" />
+            <e p="SWeapon.h" t="Include" />
           </e>
         </e>
         <e p="CoopGame.Target.cs" t="Include" />

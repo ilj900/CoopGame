@@ -234,6 +234,7 @@
     <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/Firebase" />
     <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/GameplayAbilities" />
     <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/GoogleCloudMessaging" />
+    <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/GooglePAD" />
     <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/GoogleVR/GoogleVRController" />
     <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/GoogleVR/GoogleVRHMD" />
     <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/GoogleVR/GoogleVRTransition2D" />
@@ -251,9 +252,9 @@
     <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/MicrosoftSpatialAudio" />
     <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/MixedRealityCaptureFramework" />
     <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/MobilePatchingUtils" />
-    <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/Nvidia/Ansel" />
     <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/NetworkPrediction" />
     <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/NetworkPredictionExtras" />
+    <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/Nvidia/Ansel" />
     <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/OSC" />
     <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/Oculus/OculusAudio" />
     <content url="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Runtime/Oculus/OculusAvatar" />
