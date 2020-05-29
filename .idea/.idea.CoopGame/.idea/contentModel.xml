@@ -43270,10 +43270,14 @@
           <e p="CoopGameGameModeBase.h" t="Include" />
           <e p="Private" t="Include">
             <e p="SCharacter.cpp" t="Include" />
+            <e p="SGrenade.cpp" t="Include" />
+            <e p="SGrenadeLauncher.cpp" t="Include" />
             <e p="SWeapon.cpp" t="Include" />
           </e>
           <e p="Public" t="Include">
             <e p="SCharacter.h" t="Include" />
+            <e p="SGrenade.h" t="Include" />
+            <e p="SGrenadeLauncher.h" t="Include" />
             <e p="SWeapon.h" t="Include" />
           </e>
         </e>
