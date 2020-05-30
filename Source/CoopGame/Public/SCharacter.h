@@ -8,6 +8,7 @@
 
 class UCameraComponent;
 class USpringArmComponent;
+class ASWeapon;
 
 UCLASS()
 class COOPGAME_API ASCharacter : public ACharacter
@@ -40,6 +41,8 @@ public:
 
 	virtual FVector GetPawnViewLocation() const override;
 
+	void Fire();
+
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	UCameraComponent* CameraComp;
@@ -56,4 +59,12 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category="Player", meta = (ClampMin = 0.1, ClampMax = 100.0))
 	float ZoomInterpSpeed = 20.f;
+
+	UPROPERTY(EditDefaultsOnly, Category="Player")
+	TSubclassOf<ASWeapon> StarterWeapon;
+	
+	ASWeapon* CurrentWeapon;
+
+	UPROPERTY(VisibleDefaultsOnly, Category="Player")
+	FName WeaponAttachSocketName;
 };
