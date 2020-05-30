@@ -27,25 +27,19 @@ void ASGrenadeLauncher::Tick(float DeltaTime)
 
 void ASGrenadeLauncher::Fire()
 {
-
-    
     auto MyOwner = GetOwner();
-    if (MyOwner)
+    if (MyOwner && MuzzleEffect && Projectile)
     {
         FVector EyeLocation;
         FRotator EyeRotation;
         MyOwner->GetActorEyesViewPoint(EyeLocation, EyeRotation);
     
         auto ShotDircetion = EyeRotation.Vector();
-        if (MuzzleEffect)
-        {
-            UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ImpactEffect, EyeLocation, EyeRotation);
-            if (Projectile)
-            {
-                UE_LOG(LogTemp, Warning, TEXT("Launching"));
-                auto LaunchedProjectile = GetWorld()->SpawnActor<ASGrenade>(Projectile, MeshComp->GetSocketLocation(MuzzleSocketName), EyeRotation);
-                LaunchedProjectile->Launch(LaunchSpeed);
-            }
-        }
+
+        UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ImpactEffect, EyeLocation, EyeRotation);
+
+        UE_LOG(LogTemp, Warning, TEXT("Launching"));
+        auto LaunchedProjectile = GetWorld()->SpawnActor<ASGrenade>(Projectile, MeshComp->GetSocketLocation(MuzzleSocketName), EyeRotation);
+        LaunchedProjectile->Launch(LaunchSpeed);
     }
 }
