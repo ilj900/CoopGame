@@ -27,7 +27,7 @@ void ASGrenadeLauncher::Tick(float DeltaTime)
 
 void ASGrenadeLauncher::Fire()
 {
-    auto MyOwner = GetOwner();
+    auto MyOwner = Cast<APawn>(GetOwner());
     if (MyOwner && MuzzleEffect && Projectile)
     {
         FVector EyeLocation;
@@ -41,5 +41,13 @@ void ASGrenadeLauncher::Fire()
         UE_LOG(LogTemp, Warning, TEXT("Launching"));
         auto LaunchedProjectile = GetWorld()->SpawnActor<ASGrenade>(Projectile, MeshComp->GetSocketLocation(MuzzleSocketName), EyeRotation);
         LaunchedProjectile->Launch(LaunchSpeed);
+
+    	APlayerController* PC = Cast<APlayerController>(MyOwner->GetController());
+	    {
+        	if (PC)
+        	{
+        		PC->ClientPlayCameraShake(FireCamShake);
+        	}
+	    }
     }
 }
