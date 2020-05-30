@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37fa1366-02f2-49a1-bfa7-fd6033079428" name="Default Changelist" comment="" />
+    <list default="true" id="37fa1366-02f2-49a1-bfa7-fd6033079428" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CoopGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CoopGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_GrenadeLauncher.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_GrenadeLauncher.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/PlayerPawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/PlayerPawn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/CoopGame/Private/SCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CoopGame/Private/SCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/CoopGame/Private/SWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CoopGame/Private/SWeapon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/CoopGame/Public/SCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CoopGame/Public/SCharacter.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,14 +44,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Source/CoopGame/Public/SCharacter.h" />
-        <option value="$PROJECT_DIR$/Source/CoopGame/Private/SCharacter.cpp" />
-        <option value="$PROJECT_DIR$/Source/CoopGame/Private/SWeapon.cpp" />
         <option value="$PROJECT_DIR$/Source/CoopGame/Public/SWeapon.h" />
-        <option value="$PROJECT_DIR$/Source/CoopGame/Private/SGrenadeLauncher.cpp" />
         <option value="$PROJECT_DIR$/Source/CoopGame/Public/SGrenadeLauncher.h" />
         <option value="$PROJECT_DIR$/Source/CoopGame/Public/SGrenade.h" />
         <option value="$PROJECT_DIR$/Source/CoopGame/Private/SGrenade.cpp" />
+        <option value="$PROJECT_DIR$/Source/CoopGame/Private/SGrenadeLauncher.cpp" />
+        <option value="$PROJECT_DIR$/Source/CoopGame/Public/SCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/CoopGame/Private/SCharacter.cpp" />
+        <option value="$PROJECT_DIR$/Source/CoopGame/Private/SWeapon.cpp" />
       </list>
     </option>
   </component>
@@ -179,6 +187,7 @@
       <workItem from="1590683284306" duration="7144000" />
       <workItem from="1590763358526" duration="11276000" />
       <workItem from="1590784711095" duration="6803000" />
+      <workItem from="1590829142430" duration="3824000" />
     </task>
     <servers />
   </component>
