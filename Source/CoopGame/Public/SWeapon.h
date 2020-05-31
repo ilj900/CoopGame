@@ -20,12 +20,19 @@ public:
 	// Sets default values for this actor's properties
 	ASWeapon();
 
-	UFUNCTION(BlueprintCallable, Category = "Weapon")
-	virtual void Fire();
+	UFUNCTION(Category = "Weapon")
+	virtual void StartFire();
+
+	UFUNCTION(Category = "Weapon")
+    virtual void EndFire();
+
+	void BeginPlay() override;
 
 protected:
-
 	void PlayFireEffects(FVector &InTraceEnd);
+
+	UFUNCTION(Category = "Weapon")
+	virtual void Fire();
 
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components");
@@ -47,8 +54,24 @@ protected:
 	UParticleSystem* MuzzleEffect;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
-	UParticleSystem* ImpactEffect;
+	UParticleSystem* DefaultImpactEffect;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
+    UParticleSystem* FleshImpactEffect;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
 	UParticleSystem* TracerEffect;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
+	float BaseDamage;
+
+	UPROPERTY(EditDefaultsOnly, Category="Weapon")
+	float RPM = 600;
+	float ShootInterval = 60/RPM;
+
+	UPROPERTY(EditDefaultsOnly, Category="Weapon")
+	bool bAutomaticFire = true;
+
+	float LastTimeShoot = 0.f;
+	FTimerHandle TimerHandle;
 };

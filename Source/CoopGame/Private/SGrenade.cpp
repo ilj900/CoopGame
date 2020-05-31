@@ -2,9 +2,12 @@
 
 
 #include "SGrenade.h"
+
+#include "DrawDebugHelpers.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "CoopGame/CoopGame.h"
 
 // Sets default values
 ASGrenade::ASGrenade()
@@ -38,7 +41,11 @@ void ASGrenade::Launch(float Speed)
 void ASGrenade::Explode()
 {
 	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ExplosionEffect, GetActorLocation(), GetActorRotation());
-	UGameplayStatics::ApplyRadialDamage(this, 40.f, GetActorLocation(), 500.f, UDamageType::StaticClass(), {this}, this);
+	if (UGameplayStatics::ApplyRadialDamage(this, 40.f, GetActorLocation(), ExplosionRadius, DamageType, TArray<AActor*>(), this, 0, true, COLLISION_WEAPON))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("BOOM"));
+		DrawDebugSphere(GetWorld(), GetActorLocation(), ExplosionRadius, 12, FColor::Red, false, 2.f, 0, 3.f);
+	}
 	Destroy();
 }
 

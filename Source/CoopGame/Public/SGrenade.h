@@ -45,5 +45,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category="Explosions")
 	float DetonationTime = 1.f;
 
-	
+	UPROPERTY(EditDefaultsOnly, Category="Explosions")
+	float ExplosionRadius = 100.f;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
+    TSubclassOf<UDamageType> DamageType;
 };

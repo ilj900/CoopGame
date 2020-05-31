@@ -41,7 +41,8 @@ public:
 
 	virtual FVector GetPawnViewLocation() const override;
 
-	void Fire();
+	void StartFire();
+	void EndFire();
 
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
@@ -63,7 +64,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category="Player")
 	TSubclassOf<ASWeapon> StarterWeapon;
 	
-	ASWeapon* CurrentWeapon;
+	ASWeapon* CurrentWeapon = nullptr;
 
 	UPROPERTY(VisibleDefaultsOnly, Category="Player")
 	FName WeaponAttachSocketName;

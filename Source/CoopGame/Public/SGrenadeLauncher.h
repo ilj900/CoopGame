@@ -18,12 +18,8 @@ class COOPGAME_API ASGrenadeLauncher : public ASWeapon
 
 public:
 	ASGrenadeLauncher();
-	
-	virtual void Tick(float DeltaTime) override;
 
 protected:
-	virtual void BeginPlay() override;
-
 	virtual void Fire() override;
 
 	UPROPERTY(EditDefaultsOnly, Category="Projectile")
