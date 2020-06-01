@@ -31,16 +31,19 @@ ASWeapon::ASWeapon()
 
 void ASWeapon::StartFire()
 {
-	float CurrentTime = GetWorld()->GetTimeSeconds();
-	if (CurrentTime - LastTimeShoot > ShootInterval)
+	if (!bIsReloading)
 	{
-		if (bAutomaticFire)
+		float CurrentTime = GetWorld()->GetTimeSeconds();
+		if (CurrentTime - LastTimeShoot > ShootInterval)
 		{
-			GetWorldTimerManager().SetTimer(TimerHandle, this, &ASWeapon::Fire, ShootInterval, true, 0);
-		}
-		else
-		{
-			Fire();
+			if (bAutomaticFire)
+			{
+				GetWorldTimerManager().SetTimer(TimerHandle, this, &ASWeapon::Fire, ShootInterval, true, 0);
+			}
+			else
+			{
+				Fire();
+			}
 		}
 	}
 }
@@ -54,10 +57,20 @@ void ASWeapon::BeginPlay()
 {
 	LastTimeShoot = GetWorld()->GetTimeSeconds()-ShootInterval;
 	ShootInterval = 60/RPM;
+	CurrentAmmo = MaxAmmoCapacity;
 }
 
 void ASWeapon::Fire()
 {
+	UE_LOG(LogTemp, Warning, TEXT("Curent Ammo: %i"), CurrentAmmo);
+	if (CurrentAmmo <= 0 || bIsReloading)
+	{
+		if (!bIsReloading)
+		{
+			Reload();
+		}
+		return;
+	}
 	auto MyOwner = GetOwner();
 	if (MyOwner)
 	{
@@ -116,10 +129,25 @@ void ASWeapon::Fire()
 		{
 			DrawDebugLine(GetWorld(), EyeLocation, TraceEnd, FColor::White, false, 1.0f, 0, 1.f);
 		}
-		
+
+		--CurrentAmmo;
 		PlayFireEffects(TracerEndPoint);
 		LastTimeShoot = GetWorld()->GetTimeSeconds();
 	}
+}
+
+void ASWeapon::Reload()
+{
+	EndFire();
+	bIsReloading = true;
+	static FTimerHandle LocalTimerHandle;
+	GetWorldTimerManager().SetTimer(LocalTimerHandle, this, &ASWeapon::EndReload, ReloadTime, false, ReloadTime);
+}
+
+void ASWeapon::EndReload()
+{
+	bIsReloading = false;
+	CurrentAmmo = MaxAmmoCapacity;
 }
 
 void ASWeapon::PlayFireEffects(FVector &InTraceEnd)

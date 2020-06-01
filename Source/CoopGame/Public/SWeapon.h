@@ -28,11 +28,15 @@ public:
 
 	void BeginPlay() override;
 
+	void Reload();
+
 protected:
 	void PlayFireEffects(FVector &InTraceEnd);
 
 	UFUNCTION(Category = "Weapon")
 	virtual void Fire();
+
+	void EndReload();
 
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components");
@@ -74,4 +78,13 @@ protected:
 
 	float LastTimeShoot = 0.f;
 	FTimerHandle TimerHandle;
+
+	UPROPERTY(EditDefaultsOnly, Category="Weapon")
+	uint8 MaxAmmoCapacity = 30;
+
+	UPROPERTY(EditDefaultsOnly, Category="Weapon")
+	float ReloadTime = 2.5f;
+
+	uint8 CurrentAmmo = MaxAmmoCapacity;
+	bool bIsReloading = false;
 };
