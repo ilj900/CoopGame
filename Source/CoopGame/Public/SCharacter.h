@@ -46,6 +46,9 @@ public:
 	void EndFire();
 
 protected:
+	void NextWeapon();
+
+protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	UCameraComponent* CameraComp;
 
@@ -63,7 +66,7 @@ protected:
 	float ZoomInterpSpeed = 20.f;
 
 	UPROPERTY(EditDefaultsOnly, Category="Player")
-	TSubclassOf<ASWeapon> StarterWeapon;
+	TArray<TSubclassOf<ASWeapon>> Weapons;
 	
 	ASWeapon* CurrentWeapon = nullptr;
 

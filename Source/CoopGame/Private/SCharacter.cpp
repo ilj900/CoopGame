@@ -37,14 +37,15 @@ void ASCharacter::BeginPlay()
 
 	FActorSpawnParameters SpawnParamers;
 	SpawnParamers.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-	
-	CurrentWeapon = GetWorld()->SpawnActor<ASWeapon>(StarterWeapon, FVector::ZeroVector, FRotator::ZeroRotator, SpawnParamers);
-	if (CurrentWeapon)
+	if (Weapons.Num() > 0)
 	{
-		CurrentWeapon->SetOwner(this);
-		CurrentWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponAttachSocketName);
+		CurrentWeapon = GetWorld()->SpawnActor<ASWeapon>(Weapons[0], FVector::ZeroVector, FRotator::ZeroRotator, SpawnParamers);
+		if (CurrentWeapon)
+		{
+			CurrentWeapon->SetOwner(this);
+			CurrentWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponAttachSocketName);
+		}
 	}
-	
 }
 
 void ASCharacter::MoveForward(float Value)
@@ -104,6 +105,7 @@ void ASCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ASCharacter::StartFire);
 	PlayerInputComponent->BindAction("Fire", IE_Released, this, &ASCharacter::EndFire);
 	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &ASCharacter::Reload);
+	PlayerInputComponent->BindAction("NextWeapon", IE_Pressed, this, &ASCharacter::NextWeapon);
 
 }
 
@@ -138,5 +140,27 @@ void ASCharacter::EndFire()
 	{
 		CurrentWeapon->EndFire();
     }
+}
+
+void ASCharacter::NextWeapon()
+{
+	static int32 CurrentWeaponIndex = 0;
+	++CurrentWeaponIndex;
+	if (Weapons.Num() >= CurrentWeaponIndex)
+	{
+		CurrentWeaponIndex %= Weapons.Num();
+	}
+	
+	CurrentWeapon->Destroy();
+
+	FActorSpawnParameters SpawnParamers;
+	SpawnParamers.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		
+	CurrentWeapon = GetWorld()->SpawnActor<ASWeapon>(Weapons[CurrentWeaponIndex], FVector::ZeroVector, FRotator::ZeroRotator, SpawnParamers);
+	if (CurrentWeapon)
+	{
+		CurrentWeapon->SetOwner(this);
+		CurrentWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponAttachSocketName);
+	}	
 }
 
